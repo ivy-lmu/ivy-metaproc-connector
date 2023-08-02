@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	>
+<h:body>
+	<ui:composition template="/layouts/frame-10-full-width.xhtml">
+		<ui:define name="title">user details</ui:define>
+		<ui:define name="content">
+			<h1>
+			Resident details:
+			</h1>
+			<h:form id="form">
+				<f:facet name="header">
+					<p:messages />
+				</f:facet>
+				<p:focus for="firstField"/>
+				<div class="ui-g">
+				    <div class="ui-g-2" style="font-size: large; text-align: end; font-weight: 600;">No:</div>
+				    <div class="ui-g-1" style="font-size: large;">
+				    	<p:inputText value="#{data.listOrdersData.selectedOrder.orderID}" id="firstField" readonly="true" style="width:90%"> </p:inputText> 
+				    </div>
+				    <div class="ui-g-2" style="font-size: large; text-align: end; font-weight: 600;">DDI: </div>
+				    <div class="ui-g-1" style="font-size: large;">
+				    	<p:inputText value="#{data.listOrdersData.selectedOrder.amount}" readonly="true" style="width:90%"> </p:inputText> 
+				    </div>
+				    <div class="ui-g-2" style="font-size: large; text-align: end; font-weight: 600;">Since: </div>
+				    <div class="ui-g-2" style="font-size: large;">
+				    	<p:inputText value="#{data.listOrdersData.selectedOrder.status}" readonly="true" style="width:90%"> </p:inputText> 
+				    </div>
+				    <div class="ui-g-2" >
+				    </div>
+				    <div class="ui-g-2" style="font-size: large; text-align: end; font-weight: 600;">Name:</div>
+				    <div class="ui-g-10" style="font-size: large;">
+				    	<p:inputText value="#{data.listOrdersData.selectedOrder.description}" readonly="true" style="width:90%"> </p:inputText> 
+				    </div>
+				    <div class="ui-g-2" style="font-size: large; text-align: end; font-weight: 600;">Date of Birth: </div>
+				    <div class="ui-g-10" style="font-size: large;">
+				    	<p:inputText value="#{data.listOrdersData.selectedOrder.orderedItem}" readonly="true" style="width:90%"> </p:inputText> 
+				    </div>
+				    <div class="ui-g-2" style="font-size: large; text-align: end; font-weight: 600;">Comment: </div>
+				    <div class="ui-g-10" style="font-size: large;">
+				    	<p:inputText value="" style="width:90%" id="passwordInputField"> </p:inputText> 
+				    </div>
+				     <div class="ui-g-12" style="font-size: large;"></div>
+				    <div class="ui-g-2" style="font-size: large; text-align: end; font-weight: 600;">Moved away? </div>
+				    <div class="ui-g-10" style="font-size: large;">
+						<p:selectBooleanCheckbox label="Bestellung annehmen?" value="false" id="CheckboxUserDeactivated"/>
+				    </div>
+				    <div class="ui-g-10" style="font-size: large;">
+				    </div>
+				    <div class="ui-g-2" style="font-size: large;">
+						<p:commandButton id="saveButton" actionListener="#{logic.close}" value="Save" update="form" icon="ui-icon-check" />
+				    </div>
+				</div>
+				<br />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
