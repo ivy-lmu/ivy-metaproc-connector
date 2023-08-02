@@ -1,0 +1,14 @@
+Orders #class
+automotive.portal #namespace
+orderID String #field
+orderID PERSISTENT #fieldModifier
+description String #field
+description PERSISTENT #fieldModifier
+amount String #field
+amount PERSISTENT #fieldModifier
+orderedItem String #field
+orderedItem PERSISTENT #fieldModifier
+status String #field
+status PERSISTENT #fieldModifier
+action Boolean #field
+action PERSISTENT #fieldModifier

@@ -1,0 +1,62 @@
+{
+  "format" : "10.0.0",
+  "id" : "16D17BB6AFAD15D9",
+  "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "automotive.portal.confirm.confirmData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start(listOrdersData)",
+      "config" : {
+        "callSignature" : "start",
+        "result" : {
+          "params" : [
+            { "name" : "listOrdersData", "type" : "automotive.portal.listOrdersData" }
+          ],
+          "map" : {
+            "result.listOrdersData" : "in.listOrdersData"
+          }
+        },
+        "input" : {
+          "params" : [
+            { "name" : "listOrdersData", "type" : "automotive.portal.listOrdersData" }
+          ],
+          "map" : {
+            "out.listOrdersData" : "param.listOrdersData"
+          }
+        },
+        "guid" : "16D17BB6B0B29B6F"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 8, "y" : 35 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "16D17BB6B3CDB186"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 },
+        "labelOffset" : { "x" : 8, "y" : 32 }
+      },
+      "connect" : { "id" : "f5", "to" : "f4" }
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 }
+      }
+    } ]
+}

@@ -1,0 +1,4 @@
+confirmData #class
+automotive.portal.confirm #namespace
+listOrdersData automotive.portal.listOrdersData #field
+listOrdersData PERSISTENT #fieldModifier

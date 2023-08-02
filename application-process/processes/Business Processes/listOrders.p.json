@@ -1,0 +1,114 @@
+{
+  "format" : "10.0.0",
+  "id" : "16D14B21CDA64B40",
+  "config" : {
+    "data" : "automotive.portal.listOrdersData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "start.ivp",
+      "config" : {
+        "callSignature" : "start",
+        "outLink" : "start.ivp"
+      },
+      "visual" : {
+        "at" : { "x" : 64, "y" : 64 },
+        "labelOffset" : { "x" : 8, "y" : 37 }
+      },
+      "connect" : { "id" : "f10", "to" : "f9" }
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 800, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "DialogCall",
+      "name" : "listOrders",
+      "config" : {
+        "dialogId" : "automotive.portal.listOrders",
+        "startMethod" : "start(automotive.portal.listOrdersData)",
+        "output" : {
+          "map" : {
+            "out" : "result.listOrdersData"
+          }
+        },
+        "call" : {
+          "params" : [
+            { "name" : "listOrdersData", "type" : "automotive.portal.listOrdersData" }
+          ],
+          "map" : {
+            "param.listOrdersData" : "in"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 376, "y" : 64 }
+      },
+      "connect" : { "id" : "f6", "to" : "f5" }
+    }, {
+      "id" : "f5",
+      "type" : "DialogCall",
+      "name" : "listSelectedOrder",
+      "config" : {
+        "dialogId" : "automotive.portal.viewOrder",
+        "startMethod" : "start(automotive.portal.listOrdersData)",
+        "output" : {
+          "map" : {
+            "out" : "result.listOrdersData"
+          }
+        },
+        "call" : {
+          "params" : [
+            { "name" : "listOrdersData", "type" : "automotive.portal.listOrdersData" }
+          ],
+          "map" : {
+            "param.listOrdersData" : "in"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 528, "y" : 64 }
+      },
+      "connect" : { "id" : "f8", "to" : "f7" }
+    }, {
+      "id" : "f7",
+      "type" : "DialogCall",
+      "name" : "confirm",
+      "config" : {
+        "dialogId" : "automotive.portal.confirm",
+        "startMethod" : "start(automotive.portal.listOrdersData)",
+        "output" : {
+          "map" : {
+            "out" : "result.listOrdersData"
+          }
+        },
+        "call" : {
+          "params" : [
+            { "name" : "listOrdersData", "type" : "automotive.portal.listOrdersData" }
+          ],
+          "map" : {
+            "param.listOrdersData" : "in"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 680, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    }, {
+      "id" : "f9",
+      "type" : "DialogCall",
+      "name" : "login",
+      "config" : {
+        "dialogId" : "automotive.portal.login",
+        "startMethod" : "start()"
+      },
+      "visual" : {
+        "at" : { "x" : 200, "y" : 64 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    } ]
+}

@@ -1,0 +1,4 @@
+listOrdersData #class
+automotive.portal.listOrders #namespace
+listOrdersData automotive.portal.listOrdersData #field
+listOrdersData PERSISTENT #fieldModifier

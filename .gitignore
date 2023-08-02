@@ -1,0 +1,5 @@
+/.metadata/
+**/classes/
+**/src_dataClasses/
+**/.ulcproperties
+**/src_wsproc/

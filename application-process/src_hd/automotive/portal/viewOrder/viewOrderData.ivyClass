@@ -1,0 +1,6 @@
+viewOrderData #class
+automotive.portal.viewOrder #namespace
+listOrdersData automotive.portal.listOrdersData #field
+listOrdersData PERSISTENT #fieldModifier
+file org.primefaces.model.StreamedContent #field
+file PERSISTENT #fieldModifier

@@ -1,0 +1,121 @@
+{
+  "format" : "10.0.0",
+  "id" : "16D14B28A6BCBAC4",
+  "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "automotive.portal.listOrders.listOrdersData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start(listOrdersData)",
+      "config" : {
+        "callSignature" : "start",
+        "result" : {
+          "params" : [
+            { "name" : "listOrdersData", "type" : "automotive.portal.listOrdersData" }
+          ],
+          "map" : {
+            "result.listOrdersData" : "in.listOrdersData"
+          }
+        },
+        "input" : {
+          "params" : [
+            { "name" : "listOrdersData", "type" : "automotive.portal.listOrdersData" }
+          ],
+          "map" : {
+            "out.listOrdersData" : "param.listOrdersData"
+          }
+        },
+        "guid" : "16D14B28A857F8C7"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 8, "y" : 35 }
+      },
+      "connect" : { "id" : "f7", "to" : "f6" }
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "16D14B28AB5D1C81"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 },
+        "labelOffset" : { "x" : 8, "y" : 32 }
+      },
+      "connect" : { "id" : "f5", "to" : "f4" }
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 }
+      }
+    }, {
+      "id" : "f6",
+      "type" : "Script",
+      "config" : {
+        "output" : {
+          "code" : [
+            "import automotive.portal.Orders;",
+            "",
+            "Orders order20 = new Orders();",
+            "order20.description  = \"Marcel \";",
+            "order20.orderID = \"MP324\";",
+            "order20.amount = \"Pruegel\";",
+            "order20.orderedItem = \"01/25/1985\";",
+            "order20.status = \"01/2020\";",
+            "order20.action = true;",
+            "in.listOrdersData.orders.add(order20);",
+            "",
+            "Orders order22 = new Orders();",
+            "order22.description  = \"Mike \";",
+            "order22.orderID = \"OJ234\";",
+            "order22.amount = \"Miller\";",
+            "order22.orderedItem = \"09/29/1988\";",
+            "order22.status = \"05/2000\";",
+            "order22.action = true;",
+            "in.listOrdersData.orders.add(order22);",
+            "",
+            "Orders order1 = new Orders();",
+            "order1.description  = \"Jose \";",
+            "order1.orderID = \"CR111\";",
+            "order1.amount = \"Daly\";",
+            "order1.orderedItem = \"09/23/2001\";",
+            "order1.action = true;",
+            "order1.status = \"08/2021\";",
+            "in.listOrdersData.orders.add(order1);",
+            "",
+            "Orders order21 = new Orders();",
+            "order21.description  = \"Asa Hays\";",
+            "order21.orderID = \"AA334\";",
+            "order21.amount = \"Hays\";",
+            "order21.orderedItem = \"09/20/1993\";",
+            "order21.action = true;",
+            "order21.status = \"09/1999\";",
+            "in.listOrdersData.orders.add(order21);",
+            "",
+            "Orders order2 = new Orders();",
+            "order2.description  = \"Arnas Akhtar\";",
+            "order2.orderID = \"DF234\";",
+            "order2.amount = \"Akhtar\";",
+            "order2.orderedItem = \"09/20/1981\";",
+            "order2.action = true;",
+            "order2.status = \"12/2000\";",
+            "in.listOrdersData.orders.add(order2);"
+          ]
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}

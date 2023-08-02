@@ -1,0 +1,4 @@
+orderProcessData #class
+automotive.portal #namespace
+orderAccepted Boolean #field
+orderAccepted PERSISTENT #fieldModifier
